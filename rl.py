@@ -25,6 +25,7 @@ print "PID", os.getpid()
 torch.cuda.set_device(args.gpu)
 
 def main():
+    # reinforcement learning
     if os.path.isfile("./data/train_data"):
         read_f = file("./data/train_data","rb")
         train_generater = cPickle.load(read_f)
