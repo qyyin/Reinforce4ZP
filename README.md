@@ -15,3 +15,7 @@ Deep neural network models for Chinese zero pronoun resolution learn semantic in
 * Run `./start.sh` # train the model and get results.
     *   It takes about 25min for pre-training
     *   about 60min for reinforcement learning training on GeForce GTX 1080 Ti
+
+## Other Quirks
+* It does use GPUs by default. Please make sure that the GPUs are vailable.
+    * The default device utilized is `gpu0`, to use other GPUs, please add `-gpu $DEVICE_NUMBER` to the script `start.sh` after `pretraing.py` and `rl.py`.
