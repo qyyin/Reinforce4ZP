@@ -46,7 +46,7 @@ def main():
     n = len(mcp)
     for i in range(0, n): 
         mcp[i].data[:] = mp[i].data[:]
-    optimizer = optim.Adagrad(model.parameters(),lr=nnargs["rl"])
+    optimizer = optim.Adagrad(model.parameters(),lr=0.000009)
     best = {"sum":0.0}
     best_model = Network(nnargs["embedding_size"],nnargs["embedding_dimention"],embedding_matrix,nnargs["hidden_dimention"],2).cuda()
     re = evaluate_test(test_generater,model)
@@ -122,7 +122,7 @@ def main():
             rewards = rewards - maxs
             rewards = torch.tensor(-1.0*rewards).type(torch.cuda.FloatTensor)
             optimizer.zero_grad()
-            loss = torch.sum(output_softmax*rewards) 
+            loss = torch.sum( output_softmax*rewards ) 
             loss.backward()
             optimizer.step()
         re = evaluate(train_generater,model)
