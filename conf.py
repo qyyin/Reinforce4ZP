@@ -16,7 +16,7 @@ parser.add_argument("-props",default = "./properties/prob", type=str, help="prop
 parser.add_argument("-reduced",default = 0, type=int, help="reduced")
 parser.add_argument("-gpu",default = 0, type=int, help="GPU number")
 parser.add_argument("-random_seed",default=0,type=int,help="random seed")
-parser.add_argument("-round",default=70,type=int,help="random seed")
+parser.add_argument("-round",default=70,type=int,help="pretraining iterations")
 args = parser.parse_args()
 
 random.seed(0)
