@@ -25,7 +25,7 @@ print "PID", os.getpid()
 torch.cuda.set_device(args.gpu)
 
 def main():
-
+    # pretraining file
     read_f = file("./data/train_data","rb")
     train_generater = cPickle.load(read_f)
     read_f.close()
