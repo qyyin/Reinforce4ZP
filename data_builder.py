@@ -609,9 +609,11 @@ def get_fl(zp,candidate,wl_zp,wl_candi,wd):
 
 
 if __name__ == "__main__":
+    # build data from raw OntoNotes data
     setup()
     generate_vector_data()
     generate_input_data()
+    # split training data into dev and train, saved in ./data/train_data
     train_generater = DataGnerater("train",nnargs["batch_size"])
     train_generater.devide()
     save_f = file("./data/train_data", 'wb')
