@@ -9,7 +9,9 @@ Deep neural network models for Chinese zero pronoun resolution learn semantic in
 
 ## Training Instructions
 * Experiment configurations could be found in `conf.py`
-1. run `./setup.sh` # it builds the data for training and testing from Ontonotes data.
-    *   unzip from `./data/zp_raw_data.zip` and stored in `./data/zp_data`
-2. run `./start.sh` # run to train and get results.
-    *   It takes about 25min for pre-training and about 60min for reinforcement learning training on GeForce GTX 1080 Ti`
+* Run `./setup.sh` # it builds the data for training and testing from Ontonotes data.
+    * It unzip from `./data/zp_raw_data.zip` and stored in `./data/zp_data`
+    * It devides the training dataset into the training and develpment set. The dataset is stored as `train_data` 
+* Run `./start.sh` # train the model and get results.
+    *   It takes about 25min for pre-training
+    *   about 60min for reinforcement learning training on GeForce GTX 1080 Ti
