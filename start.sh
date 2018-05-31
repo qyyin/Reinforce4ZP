@@ -1,2 +1,2 @@
-python pretrain.py -gpu 2
-python rl.py -gpu 2 -props ./properties/prob.1
+python pretrain.py
+python rl.py -props ./properties/prob.1
